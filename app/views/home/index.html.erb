@@ -1,0 +1,21 @@
+<% if notice %>
+  <div class="alert alert-success text-center col-sm-offset-3 col-md-6" role="alert">
+    <p style = "color: green" id="notice"><%= notice %></p>
+  </div>
+<% end %>
+
+
+<div class="jumbotron"><h1>gReddit</h1>
+<p>An idea stolen, and executed poorly.</p>
+</div>
+
+
+<div>
+  <% if current_user %>
+    <%= link_to "Create A Post!", new_post_path %>
+    |
+    <%= link_to "View and Comment on Posts!", posts_path%>
+  <% else %>
+    <%= link_to "View Posts!", posts_path%>
+  <% end %>
+</div>

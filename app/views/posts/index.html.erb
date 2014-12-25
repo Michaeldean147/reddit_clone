@@ -1,0 +1,12 @@
+<h1>Posts</h1>
+
+<% @posts.each do |post| %>
+      <div class="panel panel-default">
+       <div class="panel-body">
+          <h4><%= link_to "#{post.title}", post %></h4>
+       </div>
+       <div class="panel-footer"><h5>
+          <%= post.description %></h5>
+       </div>
+      </div>
+<% end %>
